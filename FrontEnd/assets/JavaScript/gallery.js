@@ -1,9 +1,9 @@
-// Récupération des travaux depuis l'API------------------------------------------------------------------
+// Récupération des travaux depuis l'API-------------------------------------------------------
 
 const response = await fetch('http://localhost:5678/api/works/')
 const galleryData = await response.json()
 
-// Création d'une boucle pour insérer les travaux---------------------------------------------------
+// Création de la galerie---------------------------------------------------------------------
 
 function generateGallery(galleryData) {
     const sectionGallery = document.querySelector(".gallery")

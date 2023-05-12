@@ -123,8 +123,35 @@ li:hover {
 }
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
+	margin-bottom: 0;
 }
+/**Ajout de style pour les boutons "mes projets"**/
+.filters {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.filtersButton {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	min-width: 100px;
+	margin: 51px 0;
+	padding: 9px;
+	border-radius: 25px;
+	border: 1px solid #1D6154;
+	background-color: white;
+}
+.filtersButton:hover {
+	color: white;
+	background-color: #1D6154;
+	cursor:pointer;
+}
+.filtersButton:active {
+	transform: scale(0.95);
+}
+/**End Ajout de style pour les boutons "mes projets"**/
 .gallery {
 	width: 100%;
 	display: grid;
