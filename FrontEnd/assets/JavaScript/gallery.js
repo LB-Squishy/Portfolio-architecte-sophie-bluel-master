@@ -6,9 +6,9 @@ console.log(galleryData)
 
 // Création de la galerie----------------------------------------------------------------------
 
-function generateGallery(galleryData) {
+function generateGallery(arrayData) {
     const sectionGallery = document.querySelector(".gallery")
-    galleryData.forEach (project => {
+    arrayData.forEach (project => {
         // créé les balises
         const galleryElement = document.createElement("figure")
         const imageUrl = document.createElement("img")
@@ -23,7 +23,7 @@ function generateGallery(galleryData) {
     })
 }
 
-// Premier affichage de la page ---------------------------------------------------------------
+// Initialisation de la page ---------------------------------------------------------------
 generateGallery(galleryData)
 
 // Gestion du bouton Tous ---------------------------------------------------------------------
@@ -38,14 +38,14 @@ const ObjectButton = document.querySelector(".filtersObject")
 ObjectButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
     const objectArray = galleryData.filter(project => project.category.id === 1)
-    console.log(objectArray)
+    generateGallery(objectArray)
 })
 // Gestion du bouton Appartements -------------------------------------------------------------
 const ApartmentButton = document.querySelector(".filtersApartment")
 ApartmentButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
     const ApartmentArray = galleryData.filter(project => project.category.id === 2)
-    console.log(ApartmentArray)
+    generateGallery(ApartmentArray)
 })
 
 // Gestion du bouton Hôtel & Restaurant -------------------------------------------------------
@@ -53,5 +53,5 @@ const HotelsRestaurantButton = document.querySelector(".filtersHotelsRestaurant"
 HotelsRestaurantButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
     const HotelsRestaurantArray = galleryData.filter(project => project.category.id === 3)
-    console.log(HotelsRestaurantArray)
+    generateGallery(HotelsRestaurantArray)
 })
