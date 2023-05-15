@@ -27,31 +27,31 @@ function generateGallery(arrayData) {
 generateGallery(galleryData)
 
 // Gestion du bouton Tous ---------------------------------------------------------------------
-const AllProjectButton = document.querySelector(".filtersAllProject")
-AllProjectButton.addEventListener ("click", function(){
+const allProjectButton = document.querySelector(".filtersAllProject")
+allProjectButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
     generateGallery(galleryData)
 })
 
 // Gestion du bouton Objets -------------------------------------------------------------------
-const ObjectButton = document.querySelector(".filtersObject")
-ObjectButton.addEventListener ("click", function(){
+const objectButton = document.querySelector(".filtersObject")
+objectButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
     const objectArray = galleryData.filter(project => project.category.id === 1)
     generateGallery(objectArray)
 })
 // Gestion du bouton Appartements -------------------------------------------------------------
-const ApartmentButton = document.querySelector(".filtersApartment")
-ApartmentButton.addEventListener ("click", function(){
+const apartmentButton = document.querySelector(".filtersApartment")
+apartmentButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
-    const ApartmentArray = galleryData.filter(project => project.category.id === 2)
-    generateGallery(ApartmentArray)
+    const apartmentArray = galleryData.filter(project => project.category.id === 2)
+    generateGallery(apartmentArray)
 })
 
 // Gestion du bouton Hôtel & Restaurant -------------------------------------------------------
-const HotelsRestaurantButton = document.querySelector(".filtersHotelsRestaurant")
-HotelsRestaurantButton.addEventListener ("click", function(){
+const hotelsRestaurantButton = document.querySelector(".filtersHotelsRestaurant")
+hotelsRestaurantButton.addEventListener ("click", function(){
     document.querySelector(".gallery").innerHTML = ""
-    const HotelsRestaurantArray = galleryData.filter(project => project.category.id === 3)
-    generateGallery(HotelsRestaurantArray)
+    const hotelsRestaurantArray = galleryData.filter(project => project.category.id === 3)
+    generateGallery(hotelsRestaurantArray)
 })
