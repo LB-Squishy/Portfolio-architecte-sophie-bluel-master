@@ -47,6 +47,19 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
+
+/** edit tool **/
+.editTool {
+	display: none;
+	background-color: black;
+	width: 100%;
+	height: 59px;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+/** end edit tool**/
+
 body {
 	max-width: 1140px;
 	margin:auto;

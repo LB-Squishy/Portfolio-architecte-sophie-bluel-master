@@ -32,7 +32,3 @@ loginForm.addEventListener ("submit", function(event) {
         console.error ("Erreur dans l'identifiant ou le mot de passe")
     })
 })
-
-// Suite => Intégration bandeau de modification admin et gestion de son apparition au log
-//       => Voir si necessite de l envoi du Token sur le Js gallery ou si le localstorage suffit
-//       => quand sur page index faire un test en saisissant token dans la console pour voir ce qu il en est
