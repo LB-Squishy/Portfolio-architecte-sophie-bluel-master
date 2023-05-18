@@ -51,6 +51,9 @@ table {
 /** edit tool **/
 .editTool {
 	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
 	background-color: black;
 	width: 100%;
 	height: 59px;
@@ -58,12 +61,36 @@ table {
 	left: 0;
 	top: 0;
 }
+.btn-editTool {
+ 	color: white;
+	font-size: 15px;
+	font-weight: 400;
+}
+.changeButton {
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 14px;
+	color: #1D6154;
+	width: 216px;
+	padding: 11px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background-color: white;
+}
+.changeButton:hover {
+	color: white;
+	background-color: #1D6154;
+	cursor:pointer;
+}
+.changeButton:active {
+	transform: scale(0.95);
+}
 /** end edit tool**/
 
 body {
 	max-width: 1140px;
 	margin:auto;
-	font-family: 'Work Sans' ;
+	font-family: 'Work Sans';
 	font-size: 14px;
 }
 header {
@@ -179,7 +206,6 @@ li:hover a:hover {
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 }
-
 .gallery img {
 	width: 100%;
 
@@ -257,3 +283,18 @@ footer nav ul {
 	bottom: 0;
 	margin: auto 0;
 }
+
+/** admin-mode **/
+.editTool-admin {
+	display: flex;
+}
+.filters-admin {
+	display: none;
+}
+.gallery-admin {
+	margin-top: 92px;
+}
+.body-admin {
+	padding-top: 59px;
+}
+/** end admin-mode **/
