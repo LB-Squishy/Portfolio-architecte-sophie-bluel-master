@@ -2,6 +2,7 @@
 const responseWorks = await fetch('http://localhost:5678/api/works/')
 const galleryData = await responseWorks.json()
 console.log(galleryData)
+
 const responseCategories = await fetch('http://localhost:5678/api/categories/')
 const categoriesData = await responseCategories.json()
 console.log(categoriesData)
@@ -77,23 +78,23 @@ generateFilters()
 
 // Gestion mode admin ou mode public--------------------------------------------------------------------------
     // récupération des éléments
-const editTool = document.querySelector(".editTool")
+const toolBar = document.querySelector(".toolBar")
 const body = document.querySelector("body")
 const loginButton = document.querySelector(".login")
-const editToolBtn = document.querySelectorAll(".btn-editTool")
-    // passage en mode admin ou public en fonctions de la présence du token
+const editBtn = document.querySelectorAll(".editBtn")
+    // passage en mode admin en fonctions de la présence du token et gestion deconnexion
 function LogInOut () {
     if (token !== null){
         // Mode admin
-        editTool.classList.add("editTool-admin")
-        filters.classList.add("filters-admin")
-        body.classList.add("body-admin")
-        editToolBtn.forEach(button => {
-            button.classList.add("btn-editTool-admin")
+        toolBar.classList.add("toolBar-activated")
+        body.classList.add("toolBar-activated-bodyReplace")
+        editBtn.forEach(button => {
+            button.classList.add("editBtn-activated")
         })
-        gallery.classList.add("gallery-admin")
+        filters.classList.add("filters-adminMode")
+        gallery.classList.add("gallery-adminMode")
+        // Bouton de deconnexion
         loginButton.innerText = "Logout"
-        // Bouton de deconnection
         loginButton.addEventListener ("click", function(event){
             event.preventDefault()
             localStorage.removeItem("token")

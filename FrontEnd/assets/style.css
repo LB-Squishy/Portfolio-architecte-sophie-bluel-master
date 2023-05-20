@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,81 +46,6 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
-
-/** edit tool **/
-.editTool {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	gap: 12px;
-	background-color: black;
-	width: 100%;
-	height: 59px;
-	position: fixed;
-	left: 0;
-	top: 0;
-}
-.btn-editTool {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	gap: 11px;
-	background-color: black;
-	font-family: 'Work Sans';
-	color: white;
-	border: none;
-	font-size: 15px;
-	font-weight: 400;
-	padding: 0;
-}
-.btn-editTool-admin {
-	display:flex !important;
-}
-.btn-editTool:hover {
-	transform: scale(1.03);
-	cursor:pointer;
-}
-.btn-editTool:active {
-	transform: scale(0.95);
-}
-#introduction .btn-editTool {
-	background-color: white;
-	color: black;
-	margin: 15px 0 0 57px;
-}
-#introduction .btn-editTool-style {
-	margin: auto;
-}
-#portfolio .btn-editTool {
-	display: none;
-	position: relative;
-	align-items: center;
-	bottom: 22px;
-	left: 700px;
-	background-color: white;
-	color: black;
-}
-.changeButton {
-	font-family: 'Work Sans';
-	font-weight: 500;
-	font-size: 14px;
-	color: #1D6154;
-	width: 216px;
-	padding: 11px;
-	border-radius: 25px;
-	border: 1px solid black;
-	background-color: white;
-}
-.changeButton:hover {
-	color: white;
-	background-color: #1D6154;
-	cursor:pointer;
-}
-.changeButton:active {
-	transform: scale(0.95);
-}
-/** end edit tool**/
-
 body {
 	max-width: 1140px;
 	margin:auto;
@@ -136,7 +60,6 @@ header {
 section {
 	margin: 50px 0
 }
-
 h1{
 	display: flex;
 	flex-direction: column;
@@ -145,14 +68,12 @@ h1{
 	font-weight: 800;
 	color: #B1663C
 }
-
 h1 > span {
 	font-family: 'Work Sans';
 	font-size:10px;
 	letter-spacing: 0.1em;
 ;
 }
-
 h2{
 	font-family: 'Syne';
 	font-weight: 700;
@@ -169,12 +90,10 @@ nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
-
 a {
 	color: black;
 	text-decoration: none;
 }
-
 li:hover a:hover {
 	color: #B1663C;
 	font-weight: 700;
@@ -193,14 +112,12 @@ li:hover a:hover {
 	margin: auto;
 	width: 80%;
 }
-
 #introduction article {
 	flex: 1
 }
 #introduction h2 {
 	margin-bottom: 1em;
 }
-
 #introduction p {
 	margin-bottom: 0.5em;
 }
@@ -208,33 +125,6 @@ li:hover a:hover {
 	text-align: center;
 	margin-bottom: 0;
 }
-/**Ajout de style pour les boutons "mes projets"**/
-.filters {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-}
-.filtersButton {
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 16px;
-	color: #1D6154;
-	min-width: 100px;
-	margin: 51px 0;
-	padding: 9px;
-	border-radius: 25px;
-	border: 1px solid #1D6154;
-	background-color: white;
-}
-.filtersButton:hover {
-	color: white;
-	background-color: #1D6154;
-	cursor:pointer;
-}
-.filtersButton:active {
-	transform: scale(0.95);
-}
-/**End Ajout de style pour les boutons "mes projets"**/
 .gallery {
 	width: 100%;
 	display: grid;
@@ -266,7 +156,6 @@ li:hover a:hover {
 	display: flex;
 	flex-direction: column;
 }
-
 #contact input, #login input {
 	height: 50px;
 	font-size: 1.2em;
@@ -280,7 +169,6 @@ li:hover a:hover {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-
 input[type="submit"]{
 	font-family: 'Syne';
 	font-weight: 700;
@@ -291,7 +179,6 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
-
 input[type="submit"]:hover {
 	transform: scale(1.05);
 	cursor:pointer;
@@ -299,20 +186,17 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
 	transform: scale(1);
 }
-
 .mdpForget {
 	font-family: 'Work Sans';
 	font-weight: 500;
 	font-size: 14px;
 	text-decoration: underline;
 }
-
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
-
 .loginFooter {	
 	position: fixed;
 	width: 1140px;
@@ -320,18 +204,125 @@ footer nav ul {
 	margin: auto 0;
 }
 
-/** admin-mode **/
-.editTool-admin {
+/**Ajout de style pour les boutons "mes projets"**/
+.filters {
 	display: flex;
-	gap: 21px;
+	justify-content: center;
+	gap: 10px;
 }
-.filters-admin {
+.filtersButton {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	min-width: 100px;
+	margin: 51px 0;
+	padding: 9px;
+	border-radius: 25px;
+	border: 1px solid #1D6154;
+	background-color: white;
+}
+.filtersButton:hover {
+	color: white;
+	background-color: #1D6154;
+	cursor:pointer;
+}
+.filtersButton:active {
+	transform: scale(0.95);
+}
+
+/** Barre d'outil **/
+.toolBar {
 	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 21px;
+	background-color: black;
+	width: 100%;
+	height: 59px;
+	position: fixed;
+	left: 0;
+	top: 0;
 }
-.gallery-admin {
-	margin-top: 92px;
+.toolBar-activated {
+	display: flex;
 }
-.body-admin {
+.toolBar-activated-bodyReplace {
 	padding-top: 59px;
 }
-/** end admin-mode **/
+
+/** Bouton "publier les changements" **/
+.postChangeBtn {
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 14px;
+	color: #1D6154;
+	width: 216px;
+	padding: 11px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background-color: white;
+}
+.postChangeBtn:hover {
+	cursor:pointer;
+	color: white;
+	background-color: #1D6154;
+}
+.postChangeBtn:active {
+	transform: scale(0.95);
+}
+
+/** Bouton d'édition **/
+.editBtn {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 11px;
+	background-color: black;
+	font-family: 'Work Sans';
+	color: white;
+	border: none;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 0;
+}
+.editBtn:hover {
+	transform: scale(1.03);
+	cursor:pointer;
+}
+.editBtn:active {
+	transform: scale(0.95);
+}
+.editBtn-activated {
+	display:flex !important;
+}
+
+/** Bouton d'édition section intro **/
+#introduction .editBtn {
+	background-color: white;
+	color: black;
+	margin: 15px 0 0 57px;
+}
+#introduction .editBtn-style {
+	margin: auto;
+}
+
+/** Bouton d'édition section portfolio **/
+.project-title{
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+#portfolio .editBtn {
+	position: relative;
+	align-items: center;
+	left: 30px;
+	background-color: white;
+	color: black;
+}
+.filters-adminMode {
+	display: none;
+}
+.gallery-adminMode {
+	margin-top: 92px;
+}
