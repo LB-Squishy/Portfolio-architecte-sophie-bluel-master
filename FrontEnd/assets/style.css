@@ -62,9 +62,44 @@ table {
 	top: 0;
 }
 .btn-editTool {
- 	color: white;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 11px;
+	background-color: black;
+	font-family: 'Work Sans';
+	color: white;
+	border: none;
 	font-size: 15px;
 	font-weight: 400;
+	padding: 0;
+}
+.btn-editTool-admin {
+	display:flex !important;
+}
+.btn-editTool:hover {
+	transform: scale(1.03);
+	cursor:pointer;
+}
+.btn-editTool:active {
+	transform: scale(0.95);
+}
+#introduction .btn-editTool {
+	background-color: white;
+	color: black;
+	margin: 15px 0 0 57px;
+}
+#introduction .btn-editTool-style {
+	margin: auto;
+}
+#portfolio .btn-editTool {
+	display: none;
+	position: relative;
+	align-items: center;
+	bottom: 22px;
+	left: 700px;
+	background-color: white;
+	color: black;
 }
 .changeButton {
 	font-family: 'Work Sans';
@@ -148,6 +183,7 @@ li:hover a:hover {
 #introduction {
 	display: flex;
 	align-items: center;
+	margin-bottom: 89px;
 }
 #introduction figure {
 	flex: 1
@@ -287,6 +323,7 @@ footer nav ul {
 /** admin-mode **/
 .editTool-admin {
 	display: flex;
+	gap: 21px;
 }
 .filters-admin {
 	display: none;

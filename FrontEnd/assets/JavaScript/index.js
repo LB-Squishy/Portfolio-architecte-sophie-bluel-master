@@ -80,6 +80,7 @@ generateFilters()
 const editTool = document.querySelector(".editTool")
 const body = document.querySelector("body")
 const loginButton = document.querySelector(".login")
+const editToolBtn = document.querySelectorAll(".btn-editTool")
     // passage en mode admin ou public en fonctions de la présence du token
 function LogInOut () {
     if (token !== null){
@@ -87,6 +88,9 @@ function LogInOut () {
         editTool.classList.add("editTool-admin")
         filters.classList.add("filters-admin")
         body.classList.add("body-admin")
+        editToolBtn.forEach(button => {
+            button.classList.add("btn-editTool-admin")
+        })
         gallery.classList.add("gallery-admin")
         loginButton.innerText = "Logout"
         // Bouton de deconnection
