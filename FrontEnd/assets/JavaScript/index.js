@@ -2,6 +2,7 @@
 import { activateEditMode } from "./includes/activateEditMode.js"
 import { generateFiltersBtn } from "./includes/generateFiltersBtn.js"
 import { generateGallery } from "./includes/generateGallery.js"
+import { openModal } from "./includes/modal.js"
 
 // Récupération des travaux et des catégories depuis l'API-----------------------------------------------------
 const responseWorks = await fetch('http://localhost:5678/api/works/')
@@ -44,3 +45,6 @@ const token = localStorage.getItem("token")
 
 // activation du mode edition si présence de token------------------------------------------------------------
 activateEditMode(token)
+
+// gestion de l'ouverture de la modale------------------------------------------------------------------------
+openModal()

@@ -326,3 +326,69 @@ footer nav ul {
 .gallery-adminMode {
 	margin-top: 92px;
 }
+
+/** Style du conteneur modale **/
+.modal {
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.3);
+	animation: fadeIn 0.8s both;
+}
+.modalActivated {
+	display: flex;
+}
+.modalClosingAnimation{
+	animation: fadeOut 1s both;
+}
+.modalContainer {
+	position: relative;
+	overflow: auto;
+	width: 630px;
+	height: 731px;
+	background: white;
+	border-radius: 10px;
+}
+
+/** Animation modale **/
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	} to {
+		opacity: 0;
+	}
+}
+
+/** Bouton de Cloture modale **/
+.modalClose {
+	position: absolute;
+	padding: 0;
+	top: 32px;
+	right: 36px;
+	border: none;
+	background-color: white;
+}
+.fa-close {
+	font-size: 20px;
+}
+.fa-close:hover {
+	transform: scale(1.2);
+	cursor:pointer;
+}
+
+/** Style de la modale Gallery **/
+
+/** Style de la modale Nouvelle Photo **/
