@@ -20,6 +20,8 @@ export function activateEditMode (token) {
         // Bouton de deconnexion
         loginButton.innerText = "Logout"
         logOutBtnActivated()
+    } else {
+        loginButton.innerText = "Login"
     }
 }
 

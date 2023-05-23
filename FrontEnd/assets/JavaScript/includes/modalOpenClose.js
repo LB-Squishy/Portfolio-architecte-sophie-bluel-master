@@ -6,7 +6,7 @@ const faClose = document.querySelector(".fa-close")
 
 // GESTION D'OUVERTURE ET FERMETURE DE LA MODALE--------------------------------------------------------------
 // Bouton editer avec ouverture de la modale
-export function openModal () {
+export function modalOpenClose () {
     editBtns.forEach(Btn => {
         Btn.addEventListener ("click", function(){
             modal.classList.add("modalActivated")
@@ -19,7 +19,7 @@ export function openModal () {
 function closeModal (event) {
     if (event.target === modal || event.target === closeArrow || event.target === faClose){
         modal.classList.add("modalClosingAnimation")
-        window.setTimeout (function(){
+        window.setTimeout (function() {
             modal.classList.remove("modalActivated", "modalClosingAnimation")
         },1000)      
         modal.removeEventListener ("click", closeModal)

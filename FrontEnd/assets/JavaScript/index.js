@@ -2,16 +2,9 @@
 import { activateEditMode } from "./includes/activateEditMode.js"
 import { generateFiltersBtn } from "./includes/generateFiltersBtn.js"
 import { generateGallery } from "./includes/generateGallery.js"
-import { openModal } from "./includes/modal.js"
 
-// Récupération des travaux et des catégories depuis l'API-----------------------------------------------------
-const responseWorks = await fetch('http://localhost:5678/api/works/')
-const galleryData = await responseWorks.json()
-console.log(galleryData)
-
-const responseCategories = await fetch('http://localhost:5678/api/categories/')
-const categoriesData = await responseCategories.json()
-console.log(categoriesData)
+// Import des données
+import { galleryData, categoriesData } from "./includes/fetchAPI.js"
 
 // Création des boutons par catégorie en fonction du backend--------------------------------------------------
 generateFiltersBtn(categoriesData)
@@ -45,6 +38,3 @@ const token = localStorage.getItem("token")
 
 // activation du mode edition si présence de token------------------------------------------------------------
 activateEditMode(token)
-
-// gestion de l'ouverture de la modale------------------------------------------------------------------------
-openModal()

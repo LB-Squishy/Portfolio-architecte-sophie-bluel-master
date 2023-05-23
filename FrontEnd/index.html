@@ -11,6 +11,7 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script type="module" src="assets/JavaScript/index.js" defer></script>
+	<script type="module" src="assets/JavaScript/modal.js" defer></script>
 </head>
 <body>
 <div class="toolBar">
@@ -84,11 +85,22 @@
 <div class="modal">
 	<div class="modalContainer">
 		<div class="modalGallery">
+			<h2>Galerie photo</h2>
+			<div class="gallery-modal"></div>
+			<div class="modalLine"></div>
+			<button class="modalBtn addNewModalBtn">Ajouter une photo</button>
+			<button class="allGallerieDelete">Supprimer la galerie</button>
 		</div>
 		<div class="modalNewPicture">
+			<h2>Ajout photo</h2>
+			<div class="modalLine"></div>
+			<button class="modalBtn addNewPictureBtn">Valider</button>
 		</div>
 		<button class="modalClose">
-			<i class="fa-solid fa-xmark fa-close"></i>
+			<i class="fa-solid fa-xmark fa-navigate fa-close"></i>
+		</button>
+		<button class="modalBack">
+			<i class="fa-solid fa-arrow-left fa-navigate"></i>
 		</button>
 	</div>
 </div>
