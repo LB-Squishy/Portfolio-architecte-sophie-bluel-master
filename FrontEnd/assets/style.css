@@ -26,6 +26,7 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	position: relative;
 }
 body {
 	line-height: 1;
@@ -440,6 +441,7 @@ footer nav ul {
 }
 .gallery-modal:hover {
 	overflow: overlay;
+	z-index: 1;
 	scrollbar-width: thin;
 }
 *::-webkit-scrollbar {
@@ -499,9 +501,33 @@ footer nav ul {
 	transform: scale(0.95);
 }
 
+/** Bouton Supprimer la photo **/
+.fa-trash-can {
+	font-size: 9px;
+}
+.deleteBtn {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 5px;
+	right: 5px;
+	padding: 4px;
+	color: white;
+	background-color: black;
+	border: none;
+}
+.deleteBtn:hover {
+	transform: scale(1.50);
+}
+.deleteBtn:active {
+	color: #B1663C;
+}
+
 /** Style de la modale Nouvelle Photo **/
 .modalNewPicture {
 	display: none;
+	align-items: center;
 	height: 100%;
 	flex-direction: column;
 	margin: 0 105px;

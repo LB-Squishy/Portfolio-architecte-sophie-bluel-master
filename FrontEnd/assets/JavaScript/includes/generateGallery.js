@@ -16,6 +16,8 @@ export function generateGallery(arrayData) {
     })
 }
 
+import { deleteWorks } from "./deleteWorks.js"
+
 // Fonction de création de galerie modale----------------------------------------------------------------------
 const galleryModal = document.querySelector(".gallery-modal")
 export function modaleGenerateGallery(arrayData) {
@@ -27,9 +29,18 @@ export function modaleGenerateGallery(arrayData) {
         imageUrl.alt = project.title
         const title = document.createElement("figcaption")
         title.innerText = "éditer"
+        const deleteBtn = document.createElement("button")
+        deleteBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
+        deleteBtn.classList.add(
+            "deleteBtn",
+            project.id
+            )
         // rattache les balises
         galleryModal.appendChild(galleryModalElement)    
         galleryModalElement.appendChild(imageUrl)
         galleryModalElement.appendChild(title)
+        galleryModalElement.appendChild(deleteBtn)
+        //ecoute des boutons
+        deleteBtn.addEventListener ("click", deleteWorks)
     })
 }

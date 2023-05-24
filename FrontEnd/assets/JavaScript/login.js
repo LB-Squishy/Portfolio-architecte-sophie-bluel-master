@@ -28,7 +28,7 @@ loginForm.addEventListener ("submit", function(event) {
         window.location.href = "index.html"
     })
     //gestion des erreurs d identification
-    .catch (function(error) {
+    .catch (function() {
         console.error ("Erreur dans l'identifiant ou le mot de passe")
     })
 })
