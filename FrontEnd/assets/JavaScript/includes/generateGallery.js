@@ -40,7 +40,7 @@ export function modaleGenerateGallery(arrayData) {
         galleryModalElement.appendChild(imageUrl)
         galleryModalElement.appendChild(title)
         galleryModalElement.appendChild(deleteBtn)
-        //ecoute des boutons
+        //ecoute des boutons supprimer
         deleteBtn.addEventListener ("click", deleteWorks)
     })
 }
