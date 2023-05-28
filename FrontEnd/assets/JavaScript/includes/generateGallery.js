@@ -4,6 +4,7 @@ export function generateGallery(arrayData) {
     arrayData.forEach (project => {
         // créé les balises
         const galleryElement = document.createElement("figure")
+        galleryElement.classList.add("Project-id:"+project.id)
         const imageUrl = document.createElement("img")
         imageUrl.src = project.imageUrl
         imageUrl.alt = project.title
@@ -16,6 +17,7 @@ export function generateGallery(arrayData) {
     })
 }
 
+// Import des fonctions depuis les modules---------------------------------------------------------------------
 import { deleteWorks } from "./deleteWorks.js"
 
 // Fonction de création de galerie modale----------------------------------------------------------------------
@@ -24,6 +26,7 @@ export function modaleGenerateGallery(arrayData) {
     arrayData.forEach (project => {
         // créé les balises
         const galleryModalElement = document.createElement("figure")
+        galleryModalElement.classList.add("Project-id:"+project.id)
         const imageUrl = document.createElement("img")
         imageUrl.src = project.imageUrl
         imageUrl.alt = project.title
