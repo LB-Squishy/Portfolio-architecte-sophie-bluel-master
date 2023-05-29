@@ -631,3 +631,13 @@ footer nav ul {
 .textInputContainer label {
 	margin: 2em 0 1em 0;
 }
+
+/** Previsualisation image **/
+.imagePreview {
+	display: none;
+}
+.imagePreview-on {
+	display: flex;
+	justify-content: center;
+	height: 169px;
+}
