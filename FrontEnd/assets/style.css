@@ -527,9 +527,10 @@ footer nav ul {
 /** Style de la modale Nouvelle Photo **/
 .modalNewPicture {
 	display: none;
-	align-items: center;
-	height: 100%;
 	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	margin: 0 105px;
 }
 .modalNewPicture-on {
@@ -537,4 +538,96 @@ footer nav ul {
 }
 .addNewPictureBtn {
 	margin-bottom: 55px;
+}
+
+/** Style Formulaire **/
+.addNewPictureForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+/** Formulaire image **/
+.imageInputContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 420px;
+	background-color: #E8F1F7;
+	border-radius: 3px;
+}
+.addImageVisualization {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.addImageVisualization-off {
+	display: none;
+}
+.addImageVisualization .fa-image {
+	font-size: 46px;
+	color: #B9C5CC;
+	margin-top: 28px;
+	margin-bottom: 21px;
+}
+.addImageVisualization p {
+	text-align: center;
+	font-size: 10px;
+	color: black;
+	margin-bottom: 19px;
+}
+.addImageVisualization label {
+	position: relative;
+	transform: translateY(-25px);
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 14px;
+	color: #306685;
+}
+.addImageVisualization label:hover {
+	cursor:pointer;
+}
+
+/** Bouton Image **/
+#imageInput {
+	position: relative;
+	color: #CBD6DC;
+	width: 173px;
+	padding: 11px;
+	border-radius: 25px;
+	border: none;
+	background-color: #CBD6DC;
+}
+#imageInput::file-selector-button {
+	display: none;
+}
+#imageInput:hover {
+	cursor:pointer;
+	transform: scale(1.02);
+}
+#imageInput:active {
+	transform: scale(0.95);
+}
+
+/** Formulaire info image **/
+.textInputContainer {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	height: 100%;
+	width: 100%;
+}
+.textInputContainer input, .textInputContainer select {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.textInputContainer label {
+	margin: 2em 0 1em 0;
 }
