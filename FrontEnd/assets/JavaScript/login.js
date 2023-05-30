@@ -1,5 +1,4 @@
 // Connexion et gestion du bouton "Se connecter"--------------------------------------------------------------
-
 const loginForm = document.querySelector(".loginForm")
 loginForm.addEventListener ("submit", function(event) {
     event.preventDefault()

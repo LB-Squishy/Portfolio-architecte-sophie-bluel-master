@@ -4,7 +4,7 @@ import { generateFiltersBtn } from "./includes/generateFiltersBtn.js"
 import { generateGallery } from "./includes/generateGallery.js"
 
 // Import des données
-import { galleryData, categoriesData } from "./includes/fetchAPI.js"
+import { galleryData, categoriesData } from "./includes/APIfetch.js"
 
 // Création des boutons par catégorie en fonction du backend--------------------------------------------------
 generateFiltersBtn(categoriesData)
