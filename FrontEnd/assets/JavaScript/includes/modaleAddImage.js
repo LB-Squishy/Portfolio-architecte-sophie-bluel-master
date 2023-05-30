@@ -6,7 +6,7 @@ export function addImagePreview () {
 
 // gère le controle et l'aperçu de l image
 function imagePreview (event) {
-    const selectedFile = event.target.files[0]
+    let selectedFile = event.target.files[0]
     // controle les conditions
     if (selectedFile.type === "image/jpeg" || selectedFile.type === "image/png") {
         if (selectedFile.size <= 4 * 1024 * 1024) {
