@@ -440,7 +440,7 @@ footer nav ul {
 	overflow: hidden;
 }
 .gallery-modal:hover {
-	overflow: overlay;
+	overflow: auto;
 	z-index: 1;
 	scrollbar-width: thin;
 }

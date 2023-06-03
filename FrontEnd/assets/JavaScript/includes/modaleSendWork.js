@@ -75,5 +75,5 @@ function resetPreview () {
     const imagePreview = document.querySelector(".imagePreview")
     addImageVisualization.classList.remove("addImageVisualization-off")
     imagePreview.classList.remove("imagePreview-on")
-    imagePreview.src = ""
+    imagePreview.src = "#"
 }
