@@ -287,11 +287,11 @@ footer nav ul {
 	font-weight: 400;
 	padding: 0;
 }
-.editBtn:hover {
+.editGalerieBtn:hover {
 	transform: scale(1.03);
 	cursor:pointer;
 }
-.editBtn:active {
+.editGalerieBtn:active {
 	transform: scale(0.95);
 }
 .editBtn-activated {

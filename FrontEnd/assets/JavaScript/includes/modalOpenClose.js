@@ -1,5 +1,5 @@
 // récupération des éléments
-const editBtns = document.querySelectorAll(".editBtn")
+const editBtns = document.querySelectorAll(".editGalerieBtn")
 const modal = document.querySelector(".modal")
 const closeArrow = document.querySelector(".modalClose")
 const faClose = document.querySelector(".fa-close")
