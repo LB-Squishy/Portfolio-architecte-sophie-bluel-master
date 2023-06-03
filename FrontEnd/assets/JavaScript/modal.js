@@ -4,12 +4,16 @@ import { modalOpenClose } from "./includes/modalOpenClose.js"
 import { modaleNavigate } from "./includes/modaleNavigate.js"
 import { addImagePreview } from "./includes/modaleAddImage.js"
 import { sendNewWork } from "./includes/modaleSendWork.js"
+import { generateCategorieModale } from "./includes/generateCategorieModale.js"
 
 // Import des données
-import { galleryData } from "./includes/APIfetch.js"
+import { galleryData, categoriesData } from "./includes/APIfetch.js"
 
 // genere la fenetre modale-----------------------------------------------------------------------------------
 modalOpenClose()
+
+// genere les options modale-----------------------------------------------------------------------------------
+generateCategorieModale(categoriesData)
 
 // gestion de la navigation
 modaleNavigate()
