@@ -5,9 +5,13 @@ import { modaleGenerateGallery } from "./generateGallery.js"
 // Fonction du bouton d'envoi de l'image----------------------------------------------------------------------
 export async function sendNewWork () {
     const sendFormBtn = document.querySelector(".addNewPictureBtn")
+    const form = document.querySelector(".addNewPictureForm")
     sendFormBtn.addEventListener ("click", async function(event) {
         event.preventDefault()
-        await requestAndActualize()       
+        if (form.reportValidity()) {
+            await requestAndActualize()
+            form.reset()
+        }   
     })
 }
 
